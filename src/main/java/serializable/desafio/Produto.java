@@ -1,6 +1,9 @@
 package serializable.desafio;
 
-public class Produto {
+import java.io.Serializable;
+
+public class Produto implements Serializable {
+    private static final long serialVersionUID = 1L; // Boa prática para serialização
     private String nome;
     private double preco;
     private int quantidade;
@@ -15,28 +18,16 @@ public class Produto {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public double getPreco() {
         return preco;
-    }
-
-    public void setPreco(double preco) {
-        this.preco = preco;
     }
 
     public int getQuantidade() {
         return quantidade;
     }
 
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
-    }
-
     @Override
     public String toString() {
-        return "Produto: \n" + "Nome: " + nome + "Preço: " + preco + "Quantidade: " + quantidade;
+        return "Produto:\nNome: " + nome + "\nPreço: " + preco + "\nQuantidade: " + quantidade + "\n";
     }
 }
