@@ -7,6 +7,6 @@ public class UserInterface {
         System.out.println("2. Remover elemento");
         System.out.println("3. Listar elementos");
         System.out.println("4. Sair");
-        System.out.println("Selecione uma opção: ");
+        System.out.print("Selecione uma opção: "); // Removido println para melhor formatação
     }
 }
